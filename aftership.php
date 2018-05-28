@@ -458,17 +458,66 @@ if (is_woocommerce_active()) {
                     }
                 }
 
+                /*
+                    kkcy edits for multiple shipment per order
+                */
                 if (count($required_fields_values)) {
                     $required_fields_msg = ' (' . join(', ', $required_fields_values) . ')';
                 } else {
                     $required_fields_msg = '';
                 }
 
+                $tracking_count = 1;
 
-                echo $track_message_1 . $values['aftership_tracking_provider_name'] . '<br/>' . $track_message_2 . $values['aftership_tracking_number'] . $required_fields_msg;
+                if ($values['aftership_tracking_number_2'] === "") {
+                    $tracking_count = 1;
+                } else if ($values['aftership_tracking_number_3'] === "") {
+                    $tracking_count = 2;
+                } else if ($values['aftership_tracking_number_4'] === "") {
+                    $tracking_count = 3;
+                } else if ($values['aftership_tracking_number_5'] === "") {
+                    $tracking_count = 4;
+                } else if ($values['aftership_tracking_number_6'] === "") {
+                    $tracking_count = 5;
+                } else if ($values['aftership_tracking_number_7'] === "") {
+                    $tracking_count = 6;
+                } else if ($values['aftership_tracking_number_8'] === "") {
+                    $tracking_count = 7;
+                } else if ($values['aftership_tracking_number_9'] === "") {
+                    $tracking_count = 8;
+                } else if ($values['aftership_tracking_number_10'] === "") {
+                    $tracking_count = 9;
+                } else if ($values['aftership_tracking_number_11'] === "") {
+                    $tracking_count = 10;
+                } else if ($values['aftership_tracking_number_12'] === "") {
+                    $tracking_count = 11;
+                } else if ($values['aftership_tracking_number_12'] != "") {
+                    $tracking_count = 12;
+                }
 
-                if (!$for_email && $this->use_track_button) {
-                    $this->display_track_button($values['aftership_tracking_provider'], $values['aftership_tracking_number'], $required_fields_values);
+                if ($tracking_count > 1) {
+                    for ($i = 1; $i <= $tracking_count; $i++) {
+                        if ($i == 1) {
+                            echo $track_message_1 . $values['aftership_tracking_provider_name'] . '<br/>' . $track_message_2 . $values['aftership_tracking_number'] . $required_fields_msg;
+
+                            if (!$for_email && $this->use_track_button) {
+                                $this->display_track_button($values['aftership_tracking_provider'], $values['aftership_tracking_number'], $required_fields_values);
+                            }
+                        } else {
+                            $custom_key = 'aftership_tracking_number' . '_' . $i;
+                            echo $track_message_1 . $values['aftership_tracking_provider_name'] . '<br/>' . $track_message_2 . $values[$custom_key] . $required_fields_msg;
+
+                            if (!$for_email && $this->use_track_button) {
+                                $this->display_track_button($values['aftership_tracking_provider'], $values[$custom_key], $required_fields_values);
+                            }
+                        }
+                    }
+                } else {
+                    echo $track_message_1 . $values['aftership_tracking_provider_name'] . '<br/>' . $track_message_2 . $values['aftership_tracking_number'] . $required_fields_msg;
+
+                    if (!$for_email && $this->use_track_button) {
+                        $this->display_track_button($values['aftership_tracking_provider'], $values['aftership_tracking_number'], $required_fields_values);
+                    }
                 }
 
                 //-------------------------------------------------------------------------------------

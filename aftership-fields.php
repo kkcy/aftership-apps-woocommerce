@@ -29,7 +29,111 @@ $aftership_fields = array(
         'id' => 'aftership_tracking_number',
         'type' => 'text',
         'label' => 'Tracking number',
-        'placeholder' => '',
+        'placeholder' => 'sample tracking number',
+        'description' => '',
+        'class' => ''
+    ),
+
+    /*
+        kkcy edits for multiple shipment per order
+        ugly layout but increase/decrease as needed
+    */
+
+    'aftership_tracking_number_2' => array(
+        'id' => 'aftership_tracking_number_2',
+        'type' => 'text',
+        'label' => 'Tracking number',
+        'placeholder' => 'sample tracking number 2',
+        'description' => '',
+        'class' => ''
+    ),
+
+    'aftership_tracking_number_3' => array(
+        'id' => 'aftership_tracking_number_3',
+        'type' => 'text',
+        'label' => 'Tracking number',
+        'placeholder' => 'sample tracking number 3',
+        'description' => '',
+        'class' => ''
+    ),
+
+    'aftership_tracking_number_4' => array(
+        'id' => 'aftership_tracking_number_4',
+        'type' => 'text',
+        'label' => 'Tracking number',
+        'placeholder' => 'sample tracking number 4',
+        'description' => '',
+        'class' => ''
+    ),
+
+    'aftership_tracking_number_5' => array(
+        'id' => 'aftership_tracking_number_5',
+        'type' => 'text',
+        'label' => 'Tracking number',
+        'placeholder' => 'sample tracking number 5',
+        'description' => '',
+        'class' => ''
+    ),
+
+    'aftership_tracking_number_6' => array(
+        'id' => 'aftership_tracking_number_6',
+        'type' => 'text',
+        'label' => 'Tracking number',
+        'placeholder' => 'sample tracking number 6',
+        'description' => '',
+        'class' => ''
+    ),
+
+    'aftership_tracking_number_7' => array(
+        'id' => 'aftership_tracking_number_7',
+        'type' => 'text',
+        'label' => 'Tracking number',
+        'placeholder' => 'sample tracking number 7',
+        'description' => '',
+        'class' => ''
+    ),
+
+    'aftership_tracking_number_8' => array(
+        'id' => 'aftership_tracking_number_8',
+        'type' => 'text',
+        'label' => 'Tracking number',
+        'placeholder' => 'sample tracking number 8',
+        'description' => '',
+        'class' => ''
+    ),
+
+    'aftership_tracking_number_9' => array(
+        'id' => 'aftership_tracking_number_9',
+        'type' => 'text',
+        'label' => 'Tracking number',
+        'placeholder' => 'sample tracking number 9',
+        'description' => '',
+        'class' => ''
+    ),
+
+    'aftership_tracking_number_10' => array(
+        'id' => 'aftership_tracking_number_10',
+        'type' => 'text',
+        'label' => 'Tracking number',
+        'placeholder' => 'sample tracking number 10',
+        'description' => '',
+        'class' => ''
+    ),
+
+    'aftership_tracking_number_11' => array(
+        'id' => 'aftership_tracking_number_11',
+        'type' => 'text',
+        'label' => 'Tracking number',
+        'placeholder' => 'sample tracking number 11',
+        'description' => '',
+        'class' => ''
+    ),
+
+    'aftership_tracking_number_12' => array(
+        'id' => 'aftership_tracking_number_12',
+        'type' => 'text',
+        'label' => 'Tracking number',
+        'placeholder' => 'sample tracking number 12',
         'description' => '',
         'class' => ''
     ),
